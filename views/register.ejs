@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- <link rel="stylesheet" href="../public/css/style.css" /> -->
+    <style>
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 10px;
+      }
+
+      input {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+      }
+      .already {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      #log {
+        text-decoration: underline;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+    <h1>Signup form</h1>
+    <br />
+    <br />
+    <div class="already">
+      Already have an account?<span id="log">Login</span>
+    </div>
+    <br />
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6 main">
+          <form action="/register" method="POST">
+            <input
+              class="box"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              required
+            /><br /><br />
+
+            <input
+              class="box"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-Mail "
+              required
+            /><br /><br />
+            <input
+              class="box"
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number "
+              required
+            /><br /><br />
+
+            <input
+              class="box"
+              type="number"
+              name="age"
+              id="age"
+              placeholder="Enter your age"
+              required
+            /><br /><br />
+
+            <input
+              class="box"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password "
+              required
+            /><br /><br />
+            <input
+              class="box"
+              type="password"
+              name="confirmpassword"
+              id="password"
+              placeholder="Confirm Your Password "
+              required
+            /><br /><br />
+
+            <label for="gender">Select your gender:</label>
+            <select id="gender">
+              <option value="male" name="gender">male</option>
+              <option value="female" name="gender">female</option>
+              <option value="others">others</option>
+            </select>
+            <br /><br />
+
+            <br />
+            <input
+              type="submit"
+              id="submitDetails"
+              name="register"
+              value="register"
+            /><br />
+          </form>
+        </div>
+
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <!-- <script>
+      document.getElementById("contact-form").onsubmit = function () {
+        //Validate Name
+        if (document.getElementById("form-name-field").value === "") {
+          document.getElementById("nameError").innerHTML =
+            "Invalid Name! Please try again.";
+          document.getElementById("nameError").className = "alert alert-danger";
+          document.getElementById("nameError").style.display = "block";
+        }
+        //Validate Email
+        if (document.getElementById("form-email-field").value === "") {
+          document.getElementById("emailError").innerHTML =
+            "Invalid Email! Please try again.";
+          document.getElementById("emailError").className =
+            "alert alert-danger";
+          document.getElementById("emailError").style.display = "block";
+        }
+        //Validate Phone
+        if (document.getElementById("form-email-field").value == "") {
+          document.getElementById("phoneError").innerHTML =
+            "Invalid Phone Number! Please try again.";
+          document.getElementById("phoneError").className =
+            "alert alert-danger";
+          document.getElementById("phoneError").style.display = "block";
+        }
+      };
+      document.getElementById("term-field").style.display = "none";
+      document.getElementById("checkbox-form").onclick = function () {
+        if (document.getElementById("checkbox-form").checked) {
+          document.getElementById("term-field").style.display = "block";
+        } else {
+          document.getElementById("term-field").style.display = "none";
+        }
+      };
+    </script> -->
+  </body>
+</html>
